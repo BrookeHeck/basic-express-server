@@ -1,6 +1,5 @@
 const logger = (request, response, next) => {
-  let message = (`${request.method} ${request.path}?name=${request.query.name}`);
-  console.log(message);
+  console.log(`${request.method} ${request.path}?name=${request.query.name}`);
   next();
 };
 

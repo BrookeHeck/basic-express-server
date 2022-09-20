@@ -13,6 +13,7 @@ const readName = require('./modules/readName');
 
 // my error messages
 const send404 = require('./error-handlers/404');
+const send500 = require('./error-handlers/500');
 
 // no database, so using this to store data
 const people = [
@@ -34,18 +35,15 @@ const people = [
 const app = express();
 app.use(cors());
 
+// server routes
 app.get('/', (request, response) => {
   response.status(200).send('Welcome to my server');
 });
 
 app.get('/person', validator, logger, readName(people));
 
+// server error handling
 app.get('*', send404);
-
-app.use((error, request, response, next) => {
-  console.log(error.message);
-  response.status(500).send(error.message);
-  next();
-});
+app.use(send500);
 
 module.exports = app;
