@@ -1,8 +1,8 @@
 'use strict';
 
 const send500 = (error, request, response, next) => {
-  console.log(error.message);
-  response.status(500).send(error.message);
+  console.log(error);
+  response.status(500).send(error);
 };
 
 module.exports = send500;
