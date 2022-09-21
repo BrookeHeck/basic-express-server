@@ -1,5 +1,5 @@
 const validator = (request, response, next) => {
-  request.query.name ? next() : response.status(400).send('Bad Request');
+  request.query.name ? next() : next('No name in query');
 };
 
 module.exports = validator;

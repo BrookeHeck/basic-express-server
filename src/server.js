@@ -46,11 +46,4 @@ app.get('/person', validator, logger, readName(people));
 app.get('*', send404);
 app.use(send500);
 
-module.exports = {
-  start: (port) => {
-    app.listen(port, () => {
-      console.log('App is running on port :: ' + port);
-    });
-  },
-  app,
-};
+module.exports = app;
