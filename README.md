@@ -10,9 +10,25 @@ This is a practice express server that can contains middleware, validators, and 
 ## AWS Deployment
 The server has all the same functionality, but is now deployed to AWS. The first deployment was made using elastic beanstalk on the AWS GUI.
 - [AWS GUI Deployment](http://basicexpressserver-env.eba-anzjedgq.us-west-2.elasticbeanstalk.com/)
+- Process
+    1. navigate to elastic bean stalk in the search bar
+    2. start a new application
+    3. select node.js
+    4. upload the files as a zip folder
+      - include the source files
+      - include the index.js file that starts the server
+      - include the package.json with a start command in the scripts
+    5. hit create application
 
 The second deployment was also made with elastic beanstalk, but this time through the console.
 - [EB CLI Deployment](http://basic-express-server-dev.us-west-2.elasticbeanstalk.com/)
+-Process
+  1. Navigate to the server root directory
+  2. eb ```eb init``` in cli
+  3. enter user credentials, get off the aws site and set permissions to admin for elastic beanstalk
+  4. enter application name
+  5. ```eb create``` in cli
+  6. ```eb deploy``` in cli
 
 
 ## Deployed Server
