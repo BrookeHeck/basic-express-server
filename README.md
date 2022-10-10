@@ -15,9 +15,11 @@ The server has all the same functionality, but is now deployed to AWS. The first
     2. start a new application
     3. select node.js
     4. upload the files as a zip folder
+      
       - include the source files
       - include the index.js file that starts the server
       - include the package.json with a start command in the scripts
+      
     5. hit create application
 
 The second deployment was also made with elastic beanstalk, but this time through the console.
